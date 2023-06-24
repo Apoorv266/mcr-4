@@ -1,0 +1,33 @@
+.post-container{
+    min-height: 100vh;
+    width: 50%;
+    border-left: 2px solid var(--border-color);
+    border-right: 2px solid var(--border-color);
+}
+.post-card-wrapper{
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column; 
+    border-bottom: 2px solid var(--border-color);
+    
+}
+
+
+.post-card-main{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px;
+}
+
+
+.loader-img-main{
+    text-align: center;
+    margin-top: 50px;
+}

@@ -1,0 +1,12 @@
+.pills-main{
+    background-color: #E5E4F7;
+    height: 25px;
+    min-width: 55px;
+    border-radius: 20px;
+    text-align: center;
+    color: #554AC7;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}

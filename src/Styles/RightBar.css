@@ -1,0 +1,14 @@
+.rightbar-main {
+  width: 25%;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 30px;
+  position: sticky;
+  top: 0;
+  border-left: 2px solid grey;
+  background-color: #F7F7F7;
+}

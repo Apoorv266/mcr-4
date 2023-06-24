@@ -1,0 +1,14 @@
+.sideNav-main{
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 30px;
+    position: sticky;
+    top: 0;
+    border-bottom: 2px solid var(--border-color);
+    border-right: 2px solid grey;
+    background-color: #F7F7F7;
+}
