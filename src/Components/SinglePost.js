@@ -15,6 +15,7 @@ const SinglePost = () => {
         <>
             <div className='single-post-main'>
 
+                <div className="post-container">
                 <Link to={"/"}>
                     <ArrowBackCircle
                         color={'#000000'}
@@ -22,7 +23,6 @@ const SinglePost = () => {
                         width="50px"
                     />
                 </Link>
-                <div className="post-container">
                     <PostCard item={currPost} />
                     {comments.map((item, index) => <CommentSection key={index} item={item} username={username} />)}
 

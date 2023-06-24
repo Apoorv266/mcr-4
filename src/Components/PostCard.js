@@ -13,17 +13,17 @@ import { PostContext } from "../Context/PostContext";
 import { Link } from "react-router-dom";
 
 const PostCard = ({ item }) => {
-  const { VoteFunc, bookMarkFunc } = useContext(PostContext)
+  const { upVoteFunc, bookMarkFunc, downVoteFunc, } = useContext(PostContext)
   const currentDate = new Date();
   return (
     <div className="single-post-main">
       <div className="single-card-wrapper">
         <div className="utils-icons">
           <>
-            <CaretUpOutline color={"#5348C6"} height="50px" width="50px" onClick={() => VoteFunc(item?.postId, true)} />
+            <CaretUpOutline color={"#5348C6"} height="50px" width="50px" onClick={() => upVoteFunc(item.postId)} />
             <p>{item.upvotes - item?.downvotes}</p>
 
-            <CaretDownOutline color={"#5348C6"} height="50px" width="50px" onClick={() => VoteFunc(item?.postId, true)} />
+            <CaretDownOutline color={"#5348C6"} height="50px" width="50px" onClick={() => downVoteFunc(item.postId)} />
           </>
         </div>
         <div className="user-Details">
@@ -40,9 +40,9 @@ const PostCard = ({ item }) => {
                 objectFit: "cover",
               }}
             />
-            <p style={{ color: "lightgray" }}>Posted by:</p>
+            <p style={{ color: "#434549" }}>Posted by:</p>
             <p style={{ color: "#564BC8" }}>{`@${item.name}`}</p>
-            <p style={{ color: "lightgray" }}>{Math.floor((currentDate.getTime() - new Date(item?.createdAt).getTime()) / (1000 * 60))} Mins</p>
+            <p style={{ color: "#434549" }}>{Math.floor((currentDate.getTime() - new Date(item?.createdAt).getTime()) / (1000 * 60))} Mins</p>
           </div>
 
           <div className="post-data">

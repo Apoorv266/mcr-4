@@ -5,8 +5,11 @@ import MiddleBar from './MiddleBar'
 import RightBar from './RightBar'
 import { Route, Routes } from 'react-router-dom'
 import SinglePost from './SinglePost'
+import Navbar from './Navbar'
 const Home = () => {
     return (
+        <>
+        <Navbar/>
         <div className='home-main'>
             <SideNavbar />
             <Routes>
@@ -16,6 +19,7 @@ const Home = () => {
 
             <RightBar />
         </div>
+        </>
     )
 }
 

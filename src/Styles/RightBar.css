@@ -12,3 +12,8 @@
   border-left: 2px solid grey;
   background-color: #F7F7F7;
 }
+
+select{
+  width: 80%;
+  height: 30px;
+}
