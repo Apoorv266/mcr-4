@@ -1,9 +1,9 @@
 import React from 'react'
 import "../Styles/Pills.css"
-const PillsComponent = () => {
+const PillsComponent = ({key, item}) => {
   return (
-    <div className='pills-main'>
-      <p>Hello</p>
+    <div className='pills-main' key={key}>
+      <p>{item}</p>
     </div>
   )
 }

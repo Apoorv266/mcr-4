@@ -9,21 +9,21 @@ import {
 import "../Styles/PostCard.css";
 import PillsComponent from "./PillsComponent";
 
-const PostCard = () => {
+const PostCard = ({item}) => {
   return (
-    <div className="single-post-main">
+    <div className="single-post-main" key={item.item}>
       <div className="single-card-wrapper">
         <div className="utils-icons">
           <>
-            <CaretUpOutline color={"#000000"} height="50px" width="50px" />
-            <p>3241</p>
-            <CaretDownOutline color={"#000000"} height="50px" width="50px" />
+            <CaretUpOutline color={"#5348C6"} height="50px" width="50px" />
+            <p>{item.upvotes - item.downvotes}</p>
+            <CaretDownOutline color={"#5348C6"} height="50px" width="50px"/>
           </>
         </div>
         <div className="user-Details">
           <div className="user-post-details">
             <img
-              src={"http://bit.ly/42Zm7tM"}
+              src={item.picUrl}
               alt=""
               srcSet=""
               width={"50px"}
@@ -35,18 +35,16 @@ const PostCard = () => {
               }}
             />
             <p style={{ color: "lightgray" }}>Posted by:</p>
-            <p style={{ color: "#564BC8" }}>@tanaypratap</p>
+            <p style={{ color: "#564BC8" }}>{`@${item.name}`}</p>
+            <p style={{ color: "lightgray" }}>{item.createdAt.slice(0, 10)}</p>
           </div>
 
           <div className="post-data">
-            <h1>Join invact for MBA</h1>
+            <h2>{item.post}</h2>
             <div className="pills">
-              <PillsComponent />
-              <PillsComponent />
-              <PillsComponent />
-              <PillsComponent />
+              {item.tags.map((item , index) => <PillsComponent key={index} item={item}/>)}
             </div>
-            <p>asdasdddddd</p>
+            <p>{item.postDescription}</p>
           </div>
         </div>
       </div>

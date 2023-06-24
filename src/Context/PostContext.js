@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { createContext, useState } from 'react'
+import { forumData } from '../Data/Data'
 
-const PostContextWrapper = () => {
+export const PostContext = createContext()
+const PostContextWrapper = ({children}) => {
+    const [postData, setpostData] = useState(forumData)
+    
   return (
-    <div>PostContextWrapper</div>
+    <PostContext.Provider value={{postData}}>{children}</PostContext.Provider>
   )
 }
 
