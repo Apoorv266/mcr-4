@@ -4,11 +4,11 @@ import "../Styles/MiddleBar.css"
 import { PostContext } from '../Context/PostContext'
 
 const MiddleBar = () => {
-  const { postData } = useContext(PostContext)
-  const { posts } = postData
+  const { sortedData } = useContext(PostContext)
+
   return (
     <div className="post-container">
-      {posts.map((item) => <PostCard item={item} key={item.postId}/>)}
+      {sortedData?.map((item) => <PostCard item={item} key={item.postId}/>)}
     </div>
   )
 }
