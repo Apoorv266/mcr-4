@@ -7,8 +7,10 @@ const MiddleBar = () => {
   const { sortedData } = useContext(PostContext)
 
   return (
-    <div className="post-container">
-      {sortedData?.map((item) => <PostCard item={item} key={item.postId}/>)}
+    <div className='single-post-main'>
+      <div className="post-container">
+        {sortedData?.map((item) => <PostCard item={item} key={item.postId} />)}
+      </div>
     </div>
   )
 }

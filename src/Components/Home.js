@@ -3,11 +3,17 @@ import "../Styles/Home.css"
 import SideNavbar from './SideNavbar'
 import MiddleBar from './MiddleBar'
 import RightBar from './RightBar'
+import { Route, Routes } from 'react-router-dom'
+import SinglePost from './SinglePost'
 const Home = () => {
     return (
         <div className='home-main'>
             <SideNavbar />
-            <MiddleBar />
+            <Routes>
+                <Route path='/' element={<MiddleBar />} />
+                <Route path="/post/:id" element={<SinglePost />} />
+            </Routes>
+
             <RightBar />
         </div>
     )

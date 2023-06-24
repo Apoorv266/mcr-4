@@ -18,10 +18,10 @@ const PostContextWrapper = ({children}) => {
         setposts(newData)
     }
 
-    const sortedData = sortState ? sortState === "latest-post" ? [...posts].sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt)) : [...posts].sort((a, b) => (b.upvotes - b.downvotes) - (a.upvotes - a.downvotes)) : posts
+    const sortedData = sortState ? sortState === "latest-post" ? [...posts].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)) : [...posts].sort((a, b) => (b.upvotes - b.downvotes) - (a.upvotes - a.downvotes)) : posts
     
   return (
-    <PostContext.Provider value={{sortedData, VoteFunc, bookMarkFunc, setsortState, userData}}>{children}</PostContext.Provider>
+    <PostContext.Provider value={{sortedData, VoteFunc, bookMarkFunc, setsortState, userData, posts}}>{children}</PostContext.Provider>
   )
 }
 

@@ -1,0 +1,19 @@
+.comment-head-main{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.comment-user-detail{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.user-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}

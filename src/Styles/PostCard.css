@@ -59,3 +59,10 @@
     justify-content: space-evenly;
     height: 50px;
 }
+
+
+.single-post-main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
